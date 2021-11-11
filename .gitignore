@@ -1,0 +1,7 @@
+*.o
+*.d
+*.lst
+**.pyc
+**__pycache__/
+*.ropeproject
+Black/Prova/Drivers/*
