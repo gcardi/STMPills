@@ -1,0 +1,17 @@
+{
+    "preLaunchTask": "build",   
+    "type": "cortex-debug",
+    "request": "launch",
+    "servertype": "jlink",
+    "cwd": "${workspaceRoot}",
+    "executable": "./build/vsarm_firmware.elf",
+    "name": "Debug (J-Link)",
+    "v1": false,
+    "interface": "swd",
+    "serialNumber": "", //If you have more than one J-Link probe, add the serial number here.
+    "jlinkscript_":"${workspaceRoot}/BSP/SEGGER/K66FN2M0_emPower/Setup/Kinetis_K66_Target.js",
+    "runToMain": true,
+    "_svdFile": "${workspaceRoot}/SVD/MK66F18.svd",
+    "armToolchainPath": "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.07\\bin",
+    "serverpath": "C:\\Program Files\\SEGGER\\JLink\\JLinkGDBServerCL.exe"
+}

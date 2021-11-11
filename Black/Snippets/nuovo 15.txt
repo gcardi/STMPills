@@ -1,0 +1,51 @@
+Installare la toolchain ARM (arm-none-eabi)
+
+Eventualmente installare le librerie specifiche dl micro o quelle "generiche" di ARM (CMSIS)
+
+Creare un file c_cpp_properties.json siffatto (per far funzionare bene intellisense).
+
+{
+    "configurations": [
+        {
+            "name": "ARM none eabi GCC (Windows)",
+            "includePath": [
+                "${workspaceRoot}",
+                "${workspaceRoot}/src"
+            ],
+            "defines": [
+                "DEBUG=1",
+                "SystemCoreClock = 180000000UL"
+            ],
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "C:\\Program Files (x86)\\GNU Arm Embedded Toolchain\\10 2021.10\\bin\\arm-none-eabi-gcc.exe",
+            "compilerArgs": [
+                "-mcpu=cortex-m3",
+                "-mthumb",
+                "-mfloat-abi=soft"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        },
+        {
+            "name": "ARM none eabi GCC (Linux)",
+            "includePath": [
+                "${workspaceRoot}",
+                "${workspaceRoot}/src"
+            ],
+            "defines": [
+                "DEBUG=1",
+                "SystemCoreClock = 180000000UL"
+            ],
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mcpu=cortex-m3",
+                "-mthumb",
+                "-mfloat-abi=soft"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
